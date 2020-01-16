@@ -178,6 +178,9 @@ h4 {
     background-color: #f6f6f6;
     padding: 1em;
 }
+.googleform {
+    text-align: center;
+}
 
 @keyframes bg {
     0% {
