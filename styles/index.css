@@ -7,18 +7,17 @@ body {
 
 header {
     background: #f6f6f6;
-    padding-top:50px;
 
     }
-ul {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-}
 
 header ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     list-style-type: none; 
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    height: 75px;
+
 }    
 header li {
     font-size: 30px;  
@@ -26,7 +25,7 @@ header li {
     align-items: center;
     justify-content: center;
 }
-.logo {
+/*.logo {
     float: center;
     width: auto;
     height: auto;
@@ -34,7 +33,7 @@ header li {
     max-height: 150px;
     background: #f6f6f6;
     bottom:0;
-}
+}*/
 
 nav {
     justify-content: center;
@@ -74,7 +73,7 @@ h1 {
     text-align: center;
     font: 'Noto Sans KR', sans-serif;
     font-weight: 300;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 h3 {
@@ -180,4 +179,95 @@ h4 {
     padding: 1em;
 }
 
+@keyframes bg {
+    0% {
+        background-size:    0 3px,
+                            3px 0,
+                            0 3px,
+                            3px 0;
+    }
+    25% {
+        background-size:    100% 3px,
+                            3px 0,
+                            0 3px,
+                            3px 0;
+    }
+    50% {
+        background-size:    100% 3px,
+                            3px 100%,
+                            0 3px,
+                            3px 0;
+    }
+    75% {
+        background-size:    100% 3px,
+                            3px 100%,
+                            100% 3px,
+                            3px 0;
+    }
+    100% {
+        background-size:    100% 3px,
+                            3px 100%,
+                            100% 3px,
+                            3px 100%;
+    }
+}
+@keyframes bg {
+    0% {
+        background-size:    0 3px,
+                            3px 0,
+                            0 3px,
+                            3px 0;
+    }
+    25% {
+        background-size:    100% 3px,
+                            3px 0,
+                            0 3px,
+                            3px 0;
+    }
+    50% {
+        background-size:    100% 3px,
+                            3px 100%,
+                            0 3px,
+                            3px 0;
+    }
+    75% {
+        background-size:    100% 3px,
+                            3px 100%,
+                            100% 3px,
+                            3px 0;
+    }
+    100% {
+        background-size:    100% 3px,
+                            3px 100%,
+                            100% 3px,
+                            3px 100%;
+    }
+}
 
+.logo {
+    width: 25%;
+    margin: 2rem auto;
+    padding: 1em;
+    
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to bottom, #FFE492 100%, #FFE492 100%),
+                        linear-gradient(to right, #FFE492 100%, #FFE492 100%),
+                        linear-gradient(to bottom, #FFE492 100%, #FFE492 100%),
+                        linear-gradient(to right, #FFE492 100%, #FFE492 100%);
+    background-size:    100% 3px,
+                        3px 100%,
+                        100% 3px,
+                        3px 100%;
+    background-position:    0 0,
+                            100% 0,
+                            100% 100%,
+                            0 100%;
+    animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+    -webkit-animation-play-state: paused;  /* Chrome, Safari, Opera */
+    animation-play-state: paused;
+}
+
+.logo:hover {
+    -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
